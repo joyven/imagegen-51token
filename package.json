@@ -1,0 +1,40 @@
+{
+  "name": "imagegen-51token",
+  "version": "1.0.0",
+  "description": "Cross-platform Codex skill and CLI for OpenAI-compatible image generation APIs.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joyven/imagegen-51token.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joyven/imagegen-51token/issues"
+  },
+  "homepage": "https://github.com/joyven/imagegen-51token#readme",
+  "bin": {
+    "imagegen-51token": "bin/imagegen-51token.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "LICENSE",
+    "agents",
+    "bin",
+    "scripts"
+  ],
+  "scripts": {
+    "check": "node bin/imagegen-51token.mjs check",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "codex",
+    "skill",
+    "image-generation",
+    "openai-compatible",
+    "51token"
+  ]
+}

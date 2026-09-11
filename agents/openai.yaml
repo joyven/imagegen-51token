@@ -1,0 +1,4 @@
+interface:
+  display_name: "跨平台图像生成"
+  short_description: "通过 OpenAI 兼容 Images API，用三个 gpt-image-2 模型生成图片并自动回退"
+  default_prompt: "使用 $imagegen-51token 根据我的要求生成一张图片。"
