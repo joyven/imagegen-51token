@@ -69,7 +69,7 @@ $env:OPENAI_API_KEY = "替换为你的密钥"
 [Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "替换为你的密钥", "User")
 ```
 
-兼容旧变量 `51TOKEN_BASE_URL`、`51TOKEN_API_KEY` 和 `GPT_IMAGE_TOKEN`，但新项目应使用 `OPENAI_*`。程序只读取配置文件中的简单赋值行，不会执行 shell 或 PowerShell profile。
+兼容变量 `W51TOKEN_BASE_URL`、`W51TOKEN_API_KEY` 和 `GPT_IMAGE_TOKEN`，但新项目应使用 `OPENAI_*`。由于环境变量名不能以数字开头，不能使用 `51TOKEN_BASE_URL` 或 `51TOKEN_API_KEY`。程序只读取配置文件中的简单赋值行，不会执行 shell 或 PowerShell profile。
 
 ## 使用 CLI
 

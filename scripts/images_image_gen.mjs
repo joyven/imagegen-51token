@@ -10,8 +10,8 @@ import { pathToFileURL } from "node:url";
 const VALID_MODELS = ["gpt-image-2-c", "gpt-image-2", "gpt-image-2-all"];
 const DEFAULT_MODEL_ORDER = [...VALID_MODELS];
 const ENV_NAMES = {
-  baseUrl: ["OPENAI_BASE_URL", "51TOKEN_BASE_URL"],
-  apiKey: ["OPENAI_API_KEY", "51TOKEN_API_KEY", "GPT_IMAGE_TOKEN"],
+  baseUrl: ["OPENAI_BASE_URL", "W51TOKEN_BASE_URL"],
+  apiKey: ["OPENAI_API_KEY", "W51TOKEN_API_KEY", "GPT_IMAGE_TOKEN"],
 };
 
 export function fail(message) {
@@ -236,7 +236,7 @@ export async function main(argv = process.argv.slice(2)) {
   if (options.command === "check") {
     const nodeMajor = Number(process.versions.node.split(".")[0]);
     if (nodeMajor < 18) fail("需要 Node.js 18 或更高版本。");
-    if (!apiKey) fail("未找到 OPENAI_API_KEY / 51TOKEN_API_KEY / GPT_IMAGE_TOKEN。");
+    if (!apiKey) fail("未找到 OPENAI_API_KEY / W51TOKEN_API_KEY / GPT_IMAGE_TOKEN。");
     console.log("检查通过：Node.js 18+、Base URL 和 API key 均已就绪。");
     console.log(`Base URL：${baseUrl}`);
     console.log(`模型回退顺序：${DEFAULT_MODEL_ORDER.join(" → ")}`);
@@ -248,7 +248,7 @@ export async function main(argv = process.argv.slice(2)) {
     console.log(JSON.stringify({ baseUrl, endpoint: "/images/generations", models, out: options.out || null, prompt }, null, 2));
     return;
   }
-  if (!apiKey) fail("未找到 OPENAI_API_KEY / 51TOKEN_API_KEY / GPT_IMAGE_TOKEN。");
+  if (!apiKey) fail("未找到 OPENAI_API_KEY / W51TOKEN_API_KEY / GPT_IMAGE_TOKEN。");
   await assertOutputAvailable(options.out, options.force);
   console.error(`Base URL：${baseUrl}`);
   console.error(`模型顺序：${models.join(" → ")}`);

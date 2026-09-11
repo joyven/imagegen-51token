@@ -7,9 +7,9 @@ description: 使用 OPENAI_BASE_URL 和 OPENAI_API_KEY 调用 OpenAI 兼容的 I
 
 这个 skill 使用 Node.js 原生 `fetch` 调用：
 
-- Base URL：优先 `OPENAI_BASE_URL`，兼容 `51TOKEN_BASE_URL`；缺省为 `https://51token.one/v1`
+- Base URL：优先 `OPENAI_BASE_URL`，兼容 `W51TOKEN_BASE_URL`；缺省为 `https://51token.one/v1`
 - Endpoint：`POST /images/generations`
-- API key：优先 `OPENAI_API_KEY`，兼容 `51TOKEN_API_KEY` 和 `GPT_IMAGE_TOKEN`
+- API key：优先 `OPENAI_API_KEY`，兼容 `W51TOKEN_API_KEY` 和 `GPT_IMAGE_TOKEN`
 - 模型：`gpt-image-2-c`、`gpt-image-2`、`gpt-image-2-all`
 - 平台：macOS、Linux、Windows
 
