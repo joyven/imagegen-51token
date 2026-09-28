@@ -7,7 +7,7 @@ import path from "node:path";
 import process from "node:process";
 import { pathToFileURL } from "node:url";
 
-const VALID_MODELS = ["gpt-image-2-c", "gpt-image-2", "gpt-image-2-all"];
+const VALID_MODELS = ["gpt-image-2.5", "gpt-image-2-c", "gpt-image-2", "gpt-image-2-all"];
 const DEFAULT_MODEL_ORDER = [...VALID_MODELS];
 const ENV_NAMES = {
   baseUrl: ["OPENAI_BASE_URL", "W51TOKEN_BASE_URL"],
