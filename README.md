@@ -2,7 +2,7 @@
 
 一个可安装到 Codex skill 目录的跨平台图像生成 skill，同时提供 `npx` CLI。它通过 OpenAI 兼容的 `POST /images/generations` 接口生成图片，默认支持：
 
-`gpt-image-2-c` -> `gpt-image-2` -> `gpt-image-2-all`
+`gpt-image-2.5` -> `gpt-image-2-c` -> `gpt-image-2` -> `gpt-image-2-all`
 
 支持 macOS、Linux、Windows，运行时只需要 Node.js 18 或更高版本，不需要提交或安装 `openai` SDK。
 
