@@ -1,6 +1,6 @@
 ---
 name: imagegen-51token
-description: 使用 OPENAI_BASE_URL 和 OPENAI_API_KEY 调用 OpenAI 兼容的 Images API 生成位图。默认支持 gpt-image-2-c、gpt-image-2、gpt-image-2-all，失败时按顺序回退；支持 macOS、Linux 和 Windows。用户明确要求 51Token、中转站 Images API、gpt-image-2-c 或调用 imagegen-51token 时使用。
+description: 使用 OPENAI_BASE_URL 和 OPENAI_API_KEY 调用 OpenAI 兼容的 Images API 生成位图。默认支持 gpt-image-2.5、gpt-image-2-c、gpt-image-2、gpt-image-2-all，失败时按顺序回退；支持 macOS、Linux 和 Windows。用户明确要求 51Token、中转站 Images API、gpt-image-2-c 或调用 imagegen-51token 时使用。
 ---
 
 # 跨平台图像生成
@@ -10,7 +10,7 @@ description: 使用 OPENAI_BASE_URL 和 OPENAI_API_KEY 调用 OpenAI 兼容的 I
 - Base URL：优先 `OPENAI_BASE_URL`，兼容 `W51TOKEN_BASE_URL`；缺省为 `https://51token.one/v1`
 - Endpoint：`POST /images/generations`
 - API key：优先 `OPENAI_API_KEY`，兼容 `W51TOKEN_API_KEY` 和 `GPT_IMAGE_TOKEN`
-- 模型：`gpt-image-2-c`、`gpt-image-2`、`gpt-image-2-all`
+- 模型：`gpt-image-2.5`、`gpt-image-2-c`、`gpt-image-2`、`gpt-image-2-all`
 - 平台：macOS、Linux、Windows
 
 禁止打印、回显或写入 API key。不要把 token 放进命令参数、提示词、日志、截图或提交记录。
@@ -97,6 +97,7 @@ $env:OPENAI_API_KEY = "替换为你的密钥"
 
 默认顺序为：
 
+0. `gpt-image-2.5`
 1. `gpt-image-2-c`
 2. `gpt-image-2`
 3. `gpt-image-2-all`
